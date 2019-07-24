@@ -1,0 +1,25 @@
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}"> 
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/ajouter_referentiel.css')}}"> 
+
+{% include 'fixed/header.html' %}  
+    
+ 		<div id="body-contener">    
+	        <div id="bloc">
+                <div class="bloc-ctn">
+                    <form id="form-apprenant" method="POST">
+                    	<span>Ajout Référentiel</span>
+                        <input type="text" name="nomRef" placeholder="Nom">
+                        <textarea placeholder="Description promotion.." name="descRef"></textarea>
+                        <input type="submit">
+                    </form>
+	            </div>
+	        </div>
+		</div>
+      	 
+    </div>
+
+
+{% include 'fixed/footer.html' %}
+
+

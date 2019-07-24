@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/header.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}"> 
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/footer.css')}}"> 
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/fontawesome/css/fontawesome.css')}}"> 
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/fontawesome/css/brands.css')}}"> 
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/fontawesome/css/solid.css')}}">
+    <title>E200 | {{titre}}</title>
+    <style type="text/css">
+        .formulaire{background-color: #86d4ba;float: left;width: 100%;margin-bottom: 5px;padding: 50px 0px;}
+        .formulaire h2{color: #eee;}
+        .formulaire form{padding: 25px 50px; background-color: rgba(0,0,0,0.4);width: 400px; margin: 0px auto;}
+        .formulaire form input{width: 100%; padding: 8px 12px; box-sizing: border-box; margin-bottom: 10px; border: none;border-bottom: 2px solid chocolate;}
+        .formulaire form input:focus{outline: none;}
+        .formulaire input[type=submit]{
+            border: none; 
+            font-weight: bold;
+            font-size: 18px;
+            transition: .3s;
+        }
+        .formulaire input[type=submit]:hover{
+            background-color: chocolate;
+            letter-spacing: 1.5px;
+            box-shadow: 1px 5px 7px #000;
+        }
+        .formulaire form #connexion{margin: 12px 0px; text-align: right;width: 100%;display: block;}
+        .formulaire a{color: #eee;}
+    </style>
+</head>
+<body>
+    <div id="bloc">
+
+        <div id="header">
+            <div class="hbloc1">
+                <img src="{{url_for('static',filename='images/cassandra.png')}}" alt="">
+            </div>
+            <div class="hbloc2">
+                <p>Ecole200</p>
+            </div>
+        </div>      
+
+        <div class="formulaire">
+            
+            <form method="POST" action="/inscription">
+                <h2>Inscription</h2>
+                <input type="text" name="uname" placeholder="Username">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="pass" placeholder="Password">
+                <input type="submit">
+                <span id="connexion">
+                    Vous possédez déjà un compte? <a href="/connexion">Connexion</a>
+                </span>
+            </form>
+          {{msg}}
+        </div>
+
+        
+    {% include 'fixed/footer.html' %}
+
+</body>
+</html>
+

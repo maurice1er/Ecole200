@@ -1,0 +1,58 @@
+	<table id="t_promo">
+        <caption>{{i_promo | count}} Promotions</caption>
+		<tr>
+			<th>NOM</th>
+			<th>DATE DEBUT</th>
+			<th>DATE FIN</th>
+			<th>Modifier</th>
+			<th>Supprimer</th>
+		</tr>
+		{% for v in i_promo %}
+		<tr>
+			<td>{{v.nom}}</td>
+			<td>{{v.dateDebut}}</td>
+			<td>{{v.dateFin}}</td>
+			<td>{{v.dateFin}}</td>
+			<td>{{v.dateFin}}</td>
+		</tr>
+		{% endfor %}
+		
+	</table>
+
+	<table id="t_refe">
+        <caption>{{i_ref | count}} Référentiels</caption>
+		<tr>
+			<th>NOM</th>
+			<th>DESCRIPTION</th>
+			<th>Date de création</th>
+		</tr>
+		{% for v in i_ref %}
+		<tr>
+			<td>{{v.nom}}</td>
+			<td>{{v.descript}}</td>
+			<td>{{v.dateCreation}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+
+	<table id="t_appr">
+        <caption> {{i_appr | count}} Apprénants</caption>
+		<tr>
+			<th>APPRENANT</th>
+			<th>PRENON</th>
+			<th>NOM</th>
+			<th>Date de Naissance</th>
+			<th>PROMOTION</th>
+			<th>REFERENTIEL</th>
+		</tr>
+		{% for v in i_appr %}
+		<tr>
+			<td>{{v.matricule}}</td>
+			<td>{{v.prenom}}</td>
+			<td>{{v.nom}}</td>
+			<td>{{v.dateNaiss}}</td>
+			<td>{{v.promo}}</td>
+			<td>{{v.ref}}</td>
+		</tr>
+		{% endfor %}
+	</table>

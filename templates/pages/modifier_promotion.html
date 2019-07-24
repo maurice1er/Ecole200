@@ -1,0 +1,30 @@
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}"> 
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/ajouter_promotion.css')}}"> 
+
+{% include 'fixed/header.html' %}  
+    
+ 		<div id="body-contener">    
+	        <div id="bloc">
+                <div class="bloc-ctn">
+                    <form id="form-apprenant" method="POST">
+                    	<span>Ajout Promotion</span>
+                        <input type="text" name="nomPromo" value="{{i_promo.nom}}">
+                        <input type="date" name="dateDebutPromo" value="{{i_promo.dateDebut}}">
+                        <input type="date" name="dateFinPromo" value="{{i_promo.dateFin}}">
+                        <select name="idRefPromo">
+                            <option value="">Référentiel</option>
+                            {% for r in i_ref %}
+                            <option value="{{r.id}}">{{r.nom}}</option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit">
+                    </form>
+	            </div>
+	        </div>
+		</div>
+      	 
+    </div>
+
+
+{% include 'fixed/footer.html' %}

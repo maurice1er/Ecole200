@@ -1,0 +1,44 @@
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/lister_referentiel.css')}}"> 
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}"> 
+
+{% include 'fixed/header.html' %}  
+    
+      <div id="body-contener">
+          
+            {% include 'fixed/index_head.html' %}
+
+            <div id="bloc1">
+            	<table id="t_refe">
+			        <caption>{{i_ref | count}} Référentiels</caption>
+					<tr>
+						<th>NOM</th>
+						<th>DESCRIPTION</th>
+						<th>DATE DE CREATION</th>
+						<th>MODIFIER</th>
+						<th>SUPPRIMER</th>
+					</tr>
+					{% for v in i_ref %}
+					<tr>
+						<td>{{v.nom}}</td>
+						<td>{{v.descript}}</td>
+						<td>{{v.dateCreation}}</td>
+						<td>
+							<a href="/modifier_referentiel/{{v.id}}">modifier</a>
+						</td>
+						<td>
+							<a href="/supprimer_referentiel/{{v.id}}">supprimer</a>
+						</td>
+					</tr>
+					{% endfor %}
+				</table>
+            </div>
+
+      </div>
+    </div>
+
+
+{% include 'fixed/footer.html' %}
+
+<!-- <script type="text/javascript" src="../../static/js/toggleTab.js"></script> -->
+

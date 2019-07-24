@@ -1,0 +1,61 @@
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/lister_apprenant.css')}}"> 
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}"> 
+
+{% include 'fixed/header.html' %}  
+    
+      <div id="body-contener">
+          
+            {% include 'fixed/index_head.html' %}
+
+            <div id="bloc1">
+            	<table id="t_appr">
+			        <caption> {{i_appr | count}} Apprénants</caption>
+					<tr>
+						<th>APPRENANT</th>
+						<th>PRENON</th>
+						<th>NOM</th>
+						<th>DATE DE NAISSANCE</th>
+						<th>PROMOTION</th>
+						<th>REFERENTIEL</th>
+						<th>MODIFIER</th>
+						<th>SUPPRIMER</th>
+						<th>DESACTIVER</th>
+					</tr>
+					{% for v in i_appr %}
+
+					<tr {% if v.status == 0 %} style="text-decoration: line-through;" {% endif %}>
+						<td>{{v.matricule}}</td>
+						<td>{{v.prenom}}</td>
+						<td>{{v.nom}}</td>
+						<td>{{v.dateNaiss}}</td>
+						<td>{{v.promo}}</td>
+						<td>{{v.ref}}</td>
+						<td>
+							<a href="/modifier_apprenant/{{v.id}}">Modifier</a>
+						</td>
+						<td>
+							<a href="/supprimer_apprenant/{{v.id}}" onclick="confirm('etes vous sûr?')">Supprimer</a>
+						</td>
+						<td>
+							<a href="/desactiver_apprenant/{{v.id}}">
+								{% if v.status == 1 %}
+									désactiver
+								{% else %}
+									activer
+								{% endif %}
+							</a>
+						</td>
+					</tr>
+					{% endfor %}
+				</table>
+            </div>
+
+      </div>
+    </div>
+
+
+{% include 'fixed/footer.html' %}
+
+<!-- <script type="text/javascript" src="../../static/js/toggleTab.js"></script> -->
+

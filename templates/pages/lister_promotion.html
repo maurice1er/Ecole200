@@ -1,0 +1,53 @@
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/lister_promotion.css')}}"> 
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
+
+{% include 'fixed/header.html' %}  
+    
+      <div id="body-contener">
+          
+            {% include 'fixed/index_head.html' %}
+
+            <div id="bloc1">
+            	<table id="t_promo">
+			        <caption>{{i_promo | count}} Promotions</caption>
+					<tr>
+						<th>NOM</th>
+						<th>DATE DEBUT</th>
+						<th>DATE FIN</th>
+						<th>Modifier</th>
+						<th>Supprimer</th>
+						<th>Desactiver</th>
+					</tr>
+					{% for v in i_promo %}
+					<tr {% if v.status == 0 %} style="text-decoration: line-through;" {% endif %}>
+						<td>{{v.nom}}</td>
+						<td>{{v.dateDebut}}</td>
+						<td>{{v.dateFin}}</td>
+						<td>
+							<a href="/modifier_promotion/{{v.id}}">Modifier</a>
+						</td>
+						<td>
+							<a href="/supprimer_promotion/{{v.id}}">Supprimer</a>
+						</td>
+						<td>
+							<a href="/desactiver_promotion/{{v.id}}">
+							{% if v.status == 1 %}
+								désactiver
+							{% else %}
+								activer
+							{% endif %}
+							</a>
+						</td>
+					</tr>
+					{% endfor %}	
+				</table>
+            </div>
+
+      </div>
+    </div>
+
+
+{% include 'fixed/footer.html' %}
+
+<!-- <script type="text/javascript" src="../../static/js/toggleTab.js"></script> -->

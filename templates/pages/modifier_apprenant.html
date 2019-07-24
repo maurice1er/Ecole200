@@ -1,0 +1,31 @@
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}"> 
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/ajouter_apprenant.css')}}"> 
+
+{% include 'fixed/header.html' %}  
+    
+ 		<div id="body-contener">    
+	        <div id="bloc">
+                <div class="bloc-ctn">{{i_appr}}
+                    <form id="form-apprenant" method="POST">
+                    	<span>Modifier Apprenant</span>
+                        <input type="text" name="matAppr" value="{{i_appr.matricule}}" disabled>
+                        <input type="text" name="prenomAppr" value="{{i_appr.prenom}}">
+                        <input type="text" name="nomAppr" value="{{i_appr.nom}}">
+                        <input type="date" name="dateNaissAppr" value="{{i_appr.dateNaiss}}">
+                        <select name="idPromoAppr">
+                            <option value="">Promotion</option>
+                            {% for p in i_promo %}
+                            <option value="{{p.id}}">{{p.nom}}</option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit">
+                    </form>
+	            </div>
+	        </div>
+		</div>
+      	 
+    </div>
+
+
+{% include 'fixed/footer.html' %}

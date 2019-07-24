@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>E200 |</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/header.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/footer.css')}}"> 
+
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/fontawesome/css/fontawesome.css')}}"> 
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/fontawesome/css/brands.css')}}"> 
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/fontawesome/css/solid.css')}}"> 
+</head>
+<body>
+	<div id="bloc">
+
+	    <div id="header">
+	        <div class="hbloc1">
+	            <a href="/">
+	            	<img src="{{url_for('static',filename='images/cassandra.png')}}" alt="">
+	            </a>
+	        </div>
+	        <div class="hbloc2">
+	            <p>Ecole200</p>
+	        </div>
+	        <div class="hbloc3">
+	            <img src="{{url_for('static',filename='images/hbase.png')}}" alt="">
+	            <label>Hi {{info['uname'] | upper}}</label>
+	        </div>
+	    </div>      
+
+	    <div id="body">
+	        <div id="menu">
+	            <ul>
+	                <h3 class="mName">MENU</h3>
+	                <li id="scolarite">Scolarité</li>
+	                <ul id="s-sco">
+	                    <a href="/ajouter_apprenant">Inscription</a>
+	                    <a href="/lister_apprenant">Lister</a>
+	                </ul>
+	                
+
+	                <li id="promotion">Promotion</li>
+	                <ul id="s-pro">
+	                    <a href="/ajouter_promotion">Ajouter</a>
+	                    <a href="/lister_promotion">Lister</a>
+	                </ul>
+
+
+	                <li id="referentiel">Referentiel</li>
+	                <ul id="s-ref">
+	                    <a href="/ajouter_referentiel">Ajouter</a>
+	                    <a href="/lister_referentiel">Lister</a>
+	                </ul>
+
+	                <li><a href="/deconnexion">Déconnexion</a></li>
+	            </ul>
+	        </div>
