@@ -1,0 +1,23 @@
+#body-contener #bloc{
+		padding: 35px 0px;
+}
+#body-contener #bloc .bloc-ctn{
+	width: 400px;
+	padding: 12px 25px;
+	background-color: #eee;
+	margin: 0px auto;
+}
+#body-contener #bloc .bloc-ctn form span{
+	width: 100%;
+	margin-bottom: 12px;
+	font-size: 22px;
+	display: block;
+}
+#body-contener #bloc .bloc-ctn form input,
+#body-contener #bloc .bloc-ctn form select{
+	width: 100%;
+	margin: 8px 0px;
+	min-width: 100%;
+	max-width: 100%;
+	padding: 8px 12px;
+}

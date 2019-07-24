@@ -1,0 +1,34 @@
+#body-contener, #bloc1{
+	background-color: #eee;
+}
+
+#t_appr{
+	margin-bottom: 25px;
+	overflow: hidden;
+}
+
+#t_appr caption{
+	width: calc(100% - 24px);
+	padding: 8px 12px;
+	font-size: 20px;
+	background-color: #ddd;
+}
+
+#t_appr th,
+#t_appr td{
+	text-align: left;
+	min-width: 75px;
+	padding: 8px 12px;
+	border-bottom: 2px solid #ddd;
+}
+
+#t_appr tr:hover{
+	background-color: #ddd;
+}
+
+#t_appr td a{
+	text-decoration: none;
+	padding: 5px 12px;
+	border: 1px solid #888;
+	box-shadow: 4px 6px 2px rgba(0,0,0,.4);
+}
