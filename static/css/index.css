@@ -1,0 +1,91 @@
+    /*****************
+   *
+  *       BODY
+ *
+******************/
+
+
+#bloc #body #body-contener{
+  width: calc(85% - 36px);
+  margin: 0px;
+  padding: 0px 18px;
+  float: left;
+	/*background-color: #eee;*/
+}
+
+#bloc #body #body-contener #head{
+  /*background-color: green;*/
+  width: 100%;
+  float: left;
+}
+#bloc #body #body-contener #head #tbord{
+  display: inline-block;
+  width: calc(25% - 50px);
+  font-size: 25px;
+  padding: 12px;
+  /*background-color: pink;*/
+  float: left;
+}
+#bloc #body #body-contener #head #sbord{
+  display: inline-block;
+  width: 75%;
+  padding: 10px 12px;
+  /*background-color: yellow;*/
+  float: left;
+}
+#bloc #body #body-contener #head #sbord table{
+  float: right;
+  border: none;
+}
+#bloc #body #body-contener #head #sbord table,
+#bloc #body #body-contener #head #sbord table tr,
+#bloc #body #body-contener #head #sbord table tr td{
+  padding: 0px;
+  margin: 0px;
+}
+#bloc #body #body-contener #head #sbord table tr td a{
+  text-decoration: none;
+  color: #000;
+  transition: .6s;
+}
+#bloc #body #body-contener #head #sbord table tr td a:hover{
+  color: #888;
+}
+#bloc #body #body-contener #head #sbord table tr td form{
+  margin: 0px; padding: 0px;
+} 
+#bloc #body #body-contener #head #sbord table tr td form input{
+  padding: 4px 15px;
+  width: 250px;
+  margin-right: 35px;
+  border-radius: 35px;
+  transition: .6s;
+  background-color: none;
+  border: none;
+}
+#bloc #body #body-contener #head #sbord table tr td form input:focus{
+  width: 400px;
+  outline: none;
+}
+	
+
+#bloc #body #body-contener #head #sbord table tr td span{
+  margin: 0px 8px;
+}
+
+#body-contener #image_bord{
+	background-color: red;
+	width: 100%;
+	float: left;
+}
+#body-contener #image_bord img{
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+}
+
+
+#body-contener #bloc1{
+	width: 100%;
+  float: left;
+}
